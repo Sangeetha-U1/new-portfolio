@@ -678,11 +678,17 @@ section {
 }
 
 .contact-container {
-  min-width: 100vw;
-  min-height: 100vh;  /* ✅ allow content to grow */
-
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  min-height: auto;
 }
-
+#contact {
+  display: block;
+}
+  #contact {
+  overflow-y: auto;
+}
 /* GRID */
 .contact-grid {
   display: grid;
