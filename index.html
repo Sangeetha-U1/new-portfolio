@@ -1028,7 +1028,7 @@ button:hover {
   <div class="menu-toggle" onclick="toggleMenu()">
   <i class="fas fa-bars"></i>
 </div>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Service</a></li>
@@ -1476,7 +1476,8 @@ button:hover {
 <script>
   // Smooth scroll + dot nav active state
   function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
+  const menu = document.getElementById("navLinks");
+  menu.classList.toggle("show");
 }
 /* =========================
    TYPING..
