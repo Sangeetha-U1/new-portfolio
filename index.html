@@ -867,23 +867,17 @@ button:hover {
   .fade-in-4 { animation-delay: 0.7s; }
 
   /* typing animation */
-  .typing {
-    border-right: 3px solid var(--pink);
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(20) infinite, blink 0.5s step-end infinite alternate;
-    display: inline-block;
-  }
+  #typing::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+  margin-left: 5px;
+}
 
-  @keyframes typing {
-    0%,100% { width: 0 }
-    50% { width: 100% }
-  }
-
-  @keyframes blink {
-    from { border-color: transparent }
-    to { border-color: var(--pink) }
-  }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
   .edu-exp-grid {
     display: grid;
@@ -958,7 +952,9 @@ button:hover {
 
     <!-- RIGHT CONTENT -->
     <div class="home-text">
-      <p class="home-subtitle fade-in fade-in-1">Frontend Developer</p>
+     <p class="home-subtitle fade-in fade-in-1">
+  I'm a <span id="typing"></span>
+</p>
 
       <h1 class="home-title fade-in fade-in-2">
         Hello, I'm<br><span>Sangeetha Uppula</span>
@@ -1368,7 +1364,46 @@ button:hover {
 
 <script>
   // Smooth scroll + dot nav active state
+/* =========================
+   TYPING..
+========================= */
+const words = [
+  "Frontend Developer",
+  "Web Developer",
+];
 
+let i = 0;      // word index
+let j = 0;      // letter index
+let currentWord = "";
+let isDeleting = false;
+
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  currentWord = words[i];
+
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, j--);
+  } else {
+    typingElement.textContent = currentWord.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1000); // pause after typing
+    return;
+  }
+
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+  
 /* =========================
    SLIDER FUNCTIONALITY
 ========================= */
