@@ -639,7 +639,20 @@ section {
 .portfolio-links a:hover {
   background: #084298;
 }
-  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    width: 100%;
+}
+  @media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
  /* ===== CONTACT SECTION ===== */
 
 #contact {
