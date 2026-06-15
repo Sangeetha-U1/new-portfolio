@@ -593,113 +593,51 @@ section {
   /* ====== PORTFOLIO ====== */
   /* ===== PORTFOLIO SECTION ===== */
 
-#portfolio {
-  background: #f5f0eb;
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.portfolio-container {
-  width: 100%;
-  max-width: 1100px;
-}
-
-/* Header */
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-label {
-  color: #e91e63;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.section-title {
-  font-size: 36px;
-  font-weight: 800;
-  color: #1a1a2e;
-  margin-top: 10px;
-}
-
-.section-desc {
-  font-size: 14px;
-  color: #666;
-  max-width: 500px;
-  margin: 15px auto 0;
-  line-height: 1.6;
-}
-
-/* Grid */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-/* Card */
 .portfolio-card {
-  position: relative;
-  height: 230px;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Image fix (IMPORTANT) */
 .portfolio-card img {
   width: 100%;
-  height: 100%;
+  height: 220px;
   object-fit: cover;
-  transition: transform 0.4s ease;
 }
 
-/* Hover zoom */
-.portfolio-card:hover img {
-  transform: scale(1.1);
-}
-
-/* Overlay content */
 .portfolio-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 15px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  color: white;
+  padding: 20px;
 }
 
 .portfolio-label h5 {
-  font-size: 15px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .portfolio-label span {
-  font-size: 12px;
-  color: #f8bbd0;
+  display: block;
+  color: #777;
+  margin-bottom: 15px;
 }
 
-/* GitHub button */
-.github-btn {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 12px;
-  color: white;
+.portfolio-links {
+  display: flex;
+  gap: 12px;
+}
+
+.portfolio-links a {
   text-decoration: none;
-  background: #e91e63;
-  padding: 6px 12px;
-  border-radius: 20px;
+  background: #0d6efd;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
-.github-btn:hover {
-  background: #c0392b;
+.portfolio-links a:hover {
+  background: #084298;
 }
   
  /* ===== CONTACT SECTION ===== */
@@ -1308,7 +1246,6 @@ button:hover {
 
 <!-- PORTFOLIO SECTION -->
 
-<!-- PORTFOLIO SECTION -->
 <section id="portfolio">
   <div class="portfolio-container">
 
@@ -1330,9 +1267,14 @@ button:hover {
           <h5>Real Estate Website</h5>
           <span>HTML · CSS · Bootstrap · JS</span>
 
-    <a href="https://sangeetha-u1.github.io/event-form/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://sangeetha-u1.github.io/event-form/" target="_blank">Live Demo</a>
-
+          <div class="portfolio-links">
+            <a href="https://sangeetha-u1.github.io/event-form/" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://sangeetha-u1.github.io/event-form/" target="_blank">
+              Live Demo
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1344,8 +1286,14 @@ button:hover {
           <h5>Sara Travels</h5>
           <span>HTML · CSS · JavaScript</span>
 
-          <a href="https://rohan-1405.github.io/Sara-Travels/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://rohan-1405.github.io/Sara-Travels/" target="_blank">Live Demo</a>
+          <div class="portfolio-links">
+            <a href="https://rohan-1405.github.io/Sara-Travels/" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://rohan-1405.github.io/Sara-Travels/" target="_blank">
+              Live Demo
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1356,8 +1304,15 @@ button:hover {
         <div class="portfolio-label">
           <h5>Web Dev Course</h5>
           <span>HTML · CSS · Bootstrap</span>
-                    <a href="https://sangeetha-u1.github.io/web-development-course/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://sangeetha-u1.github.io/web-development-course/" target="_blank">Live Demo</a>
+
+          <div class="portfolio-links">
+            <a href="https://sangeetha-u1.github.io/web-development-course/" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://sangeetha-u1.github.io/web-development-course/" target="_blank">
+              Live Demo
+            </a>
+          </div>
         </div>
       </div>
 
